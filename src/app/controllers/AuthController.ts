@@ -22,7 +22,7 @@ class AuthController {
             return res.sendStatus(401);
         }
 
-        const token = jwt.sign({ id: user.id }, 'secret', { expiresIn: '1d' }); // falta .env 'secret'
+        const token = jwt.sign({ id: user.id }, 'secret', { expiresIn: '1d' });
 
         delete user.password;
 
